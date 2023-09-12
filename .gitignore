@@ -1,0 +1,37 @@
+
+# CRAFT ENVIRONMENT
+.env*
+!.env.example
+
+# COMPOSER
+/vendor
+
+# CRAFT STORAGE
+/storage/*
+!/storage/rebrand/
+!/storage/.gitkeep
+
+# ASSETS
+/web/cpresources/*
+
+# LOGS
+logs
+*.log
+
+# BUILD FILES
+/node_modules/*
+/npm-debug.log
+
+# Craft Related
+/config/license.key
+
+# MISC FILES
+.cache
+.DS_Store
+.idea
+.nova
+.vscode
+.project
+.settings
+
+

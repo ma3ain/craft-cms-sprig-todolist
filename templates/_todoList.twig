@@ -1,0 +1,32 @@
+{% set sort = sort ?? "date" %}
+{% do sprig.pushUrl("?sort=" ~ sort) %}
+{{ hiddenInput("sort", sort) }}
+
+{% set items = craft.entries.section("items").anyStatus().all() ?? null %}
+{% if sort == "status" %}
+  {% set items = items|multisort("status", direction = SORT_DESC) %}
+{% endif %}
+
+{% if items %}
+  <section class="space-y-1">
+    {% for item in items %}
+      {% include "_todoItem" with {
+        itemId: item.id
+      } %}
+    {% endfor %}
+    <div class="px-12 pt-6 text-base flex items-center justify-end space-x-2">
+      <span>Move done items at the end?</span>
+      <button sprig id="sortButton" s-val:sort="{{ sort == "status" ? "date" : "status" }}" class="w-5 h-5 rounded bg-white hover:bg-red-200">
+        {% if sort == "status" %}
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-red-600">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+          </svg>
+        {% endif %}
+      </button>
+    </div>
+  </section>
+{% else %}
+  <div class="px-12 text-center text-lg">
+    Your todo list is empty.
+  </div>
+{% endif %}

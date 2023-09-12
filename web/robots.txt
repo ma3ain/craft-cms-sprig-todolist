@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /cpresources/
+Disallow: /storage/
+Disallow: /vendor/
+Disallow: /admin/

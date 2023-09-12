@@ -1,0 +1,104 @@
+dateModified: 1694520332
+elementSources:
+  craft\elements\Entry:
+    -
+      defaultSort:
+        - postDate
+        - desc
+      disabled: false
+      key: '*'
+      tableAttributes:
+        - link
+        - section
+        - type
+        - postDate
+        - author
+        - dateUpdated
+        - revisionCreator
+      type: native
+    -
+      defaultSort:
+        - title
+        - asc
+      disabled: false
+      key: singles
+      tableAttributes:
+        - link
+        - dateUpdated
+        - revisionCreator
+      type: native
+    -
+      defaultSort:
+        - postDate
+        - desc
+      disabled: false
+      key: 'section:9e78a6d6-4c8a-4a13-ace9-37db731411ed'
+      tableAttributes:
+        - author
+        - link
+        - dateUpdated
+        - revisionCreator
+      type: native
+    -
+      defaultSort:
+        - postDate
+        - desc
+      disabled: false
+      key: 'section:605954e5-35e4-4427-8ea0-b9d8b64a723e' # Items
+      tableAttributes:
+        - postDate
+        - expiryDate
+        - author
+        - link
+      type: native
+email:
+  fromEmail: $SYSTEM_MAIL
+  fromName: $SITE_NAME
+  replyToEmail: $REPLY_MAIL
+  template: ''
+  transportSettings:
+    apiKey: $MAILGUN_API_KEY
+    domain: $MAILGUN_DOMAIN
+    endpoint: $MAILGUN_ENDPOINT
+  transportType: craft\mailgun\MailgunAdapter
+meta:
+  __names__:
+    1e3282cf-612c-4d04-b4f6-02ec0ef60e78: Headline # Headline
+    5a388334-4b50-4126-b1df-67227ce21818: $SITE_NAME # $SITE_NAME
+    5b54e8f6-48f6-47a6-812e-7799a1e2f264: Image # Image
+    5f4c36bb-f3d9-4374-a12d-45bccbebd07a: File # File
+    76d94634-01f8-4535-b4bf-e2870ae8f25d: 'Public Schema' # Public Schema
+    84aef975-f98d-44f6-8450-a081ab798069: Common # Common
+    2648ca0e-d79c-46fd-bbfd-cfa0a2bcb765: Item # Item
+    4706b3bf-052e-4604-bbf9-0095d00f790a: Default # Default
+    483487fa-d1d2-435a-ad87-6373f9723729: Subline # Subline
+    605954e5-35e4-4427-8ea0-b9d8b64a723e: Items # Items
+    771224a8-9764-4322-a824-3e250b74523d: Headline # Headline
+    af5cc8b1-f85a-44ce-a1f4-3bd099bc24a9: Headline # Headline
+    ce845487-a637-4e39-a2cf-8e7fbdb0b3e2: Button # Button
+    d6d68433-69a8-40e3-b902-a9aa2a507b07: Text # Text
+    e76da8b3-d497-4640-b67d-6cb54882b8b4: Content # Content
+plugins:
+  dumper:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  sprig:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.1
+system:
+  edition: pro
+  live: true
+  name: $SITE_NAME
+  retryDuration: null
+  schemaVersion: 4.5.3.0
+  timeZone: Europe/Berlin
+users:
+  allowPublicRegistration: true
+  deactivateByDefault: false
+  defaultGroup: 9cf9bc77-b5c2-4d2e-a0ae-c1b418fa872e
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true
+  validateOnPublicRegistration: false

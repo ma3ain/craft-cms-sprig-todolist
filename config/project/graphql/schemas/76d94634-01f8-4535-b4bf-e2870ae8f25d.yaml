@@ -1,0 +1,4 @@
+isPublic: true
+name: 'Public Schema'
+scope:
+  - 'sites.5a388334-4b50-4126-b1df-67227ce21818:read' # $SITE_NAME

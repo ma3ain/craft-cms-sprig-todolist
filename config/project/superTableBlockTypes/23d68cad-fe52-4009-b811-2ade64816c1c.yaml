@@ -1,0 +1,86 @@
+changedFieldIndicator: 280950782
+field: 1a88cee2-a78c-4f53-82d7-7c6e053d737f
+fieldLayouts:
+  f313bbf3-30ac-4b4f-8115-a75c3f15da7a:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 771224a8-9764-4322-a824-3e250b74523d # Headline
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 32c6b55f-2013-4540-8951-719bf4321700
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: e76da8b3-d497-4640-b67d-6cb54882b8b4 # Content
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ffbb6456-48e7-4df6-bb80-c206759d617a
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: f5e873ff-e7e7-4f97-bc91-6d5b69e0a6e5
+        userCondition: null
+fields:
+  771224a8-9764-4322-a824-3e250b74523d: # Headline
+    columnSuffix: ulhmxhwm
+    contentColumnType: text
+    fieldGroup: null
+    handle: headline
+    instructions: null
+    name: Headline
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  e76da8b3-d497-4640-b67d-6cb54882b8b4: # Content
+    columnSuffix: qwtjrjmx
+    contentColumnType: text
+    fieldGroup: null
+    handle: text
+    instructions: null
+    name: Content
+    searchable: false
+    settings:
+      availableTransforms:
+        - 602d6897-7455-4f99-98e9-52c99f35132c
+      availableVolumes:
+        - 8ce61d6f-c2a3-4076-bb14-40b900c685cf
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: 602d6897-7455-4f99-98e9-52c99f35132c
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: Advanced.json
+      removeEmptyTags: true
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field

@@ -1,0 +1,142 @@
+changedFieldIndicator: 1591776962
+field: ce0863d3-a4a9-4752-834b-133fb279efc0
+fieldLayouts:
+  3087b671-a5de-43b4-a38f-6fe21fb37ad2:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: af5cc8b1-f85a-44ce-a1f4-3bd099bc24a9 # Headline
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2eb41a36-b837-42d3-895c-5038451afe12
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 483487fa-d1d2-435a-ad87-6373f9723729 # Subline
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 32e1fb2c-d6d4-4fd5-81a4-d371a64acb87
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 5f4c36bb-f3d9-4374-a12d-45bccbebd07a # File
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 07311030-f6fe-4c37-ac4d-3dcc4566087c
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: e808b865-18b4-41b7-bd73-5c22309f5eb8
+        userCondition: null
+fields:
+  5f4c36bb-f3d9-4374-a12d-45bccbebd07a: # File
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: file
+    instructions: null
+    name: File
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds:
+        - audio
+        - compressed
+        - image
+        - json
+        - pdf
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:8ce61d6f-c2a3-4076-bb14-40b900c685cf'
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: null
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:8ce61d6f-c2a3-4076-bb14-40b900c685cf'
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: null
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources:
+        - 'volume:8ce61d6f-c2a3-4076-bb14-40b900c685cf'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  483487fa-d1d2-435a-ad87-6373f9723729: # Subline
+    columnSuffix: ycwyqdyl
+    contentColumnType: text
+    fieldGroup: null
+    handle: subline
+    instructions: null
+    name: Subline
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  af5cc8b1-f85a-44ce-a1f4-3bd099bc24a9: # Headline
+    columnSuffix: digfgtnk
+    contentColumnType: text
+    fieldGroup: null
+    handle: headline
+    instructions: null
+    name: Headline
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
