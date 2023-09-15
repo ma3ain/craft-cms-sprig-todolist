@@ -10,12 +10,8 @@
 {% if items %}
   <section class="space-y-1">
     {% for item in items %}
-      {% include "_todoItem" with {
+      {% include "_todoItem, _todoPriority " with {
         itemId: item.id
-      } %}
-
-      {% include "_todoPriority" with {
-        item: item
       } %}
 
     {% endfor %}
