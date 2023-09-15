@@ -10,14 +10,22 @@
 {% if items %}
   <section class="space-y-1">
     {% for item in items %}
+
       {% include "_todoItem" with {
         itemId: item.id
+      } %}
+
+      {% include "_todoDueDate" with {
+        item: item
       } %}
 
     {% endfor %}
 
     {# Include the To-Do List Statistics template here #}
     {% include "_todoStatistics" %}
+
+    {# Include the To-Do List Categories template here #}
+    {% include "_todoCategories" %}
 
     {# Include the To-Do List Categories template here #}
     {% include "_todoCategories" %}
