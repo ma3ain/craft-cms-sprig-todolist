@@ -1,0 +1,12 @@
+{% set totalItems = craft.entries.section("items").count() %}
+{% set completedItems = craft.entries.section("items").status("disabled").count() %}
+{% set pendingItems = totalItems - completedItems %}
+
+<div class="p-12">
+  <h2 class="text-2xl font-semibold mb-4">To-Do List Statistics</h2>
+  <ul class="list-disc list-inside">
+    <li>Total Items: {{ totalItems }}</li>
+    <li>Completed Items: {{ completedItems }}</li>
+    <li>Pending Items: {{ pendingItems }}</li>
+  </ul>
+</div>
