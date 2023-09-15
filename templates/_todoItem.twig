@@ -1,6 +1,6 @@
 {% set item = craft.entries.section("items").status(null).id(itemId).one() ?? null %}
 {% set isDone = item.enabled is defined and not item.enabled %}
-{% set itemCategories = item.itemCategories.all() %}
+{% set itemCategories = item.todoCategories.all() %}
 
 
 <div id="item_{{ item.id }}" class="item px-12 py-6 bg-white/10 text-lg flex justify-between space-x-6 font-semibold">
@@ -14,7 +14,7 @@
     </span>
 
     {% if itemCategories|length > 0 %}
-      <p>Categories: {% for category in itemCategories %}{{ category.title }}{% if not loop.last %}, {% endif %}{% endfor %}</p>
+      <p>Categories: {% for category in todoCategories %}{{ category.title }}{% if not loop.last %}, {% endif %}{% endfor %}</p>
     {% endif %}
 
   </div>
