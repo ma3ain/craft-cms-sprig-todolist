@@ -13,6 +13,11 @@
       {% include "_todoItem" with {
         itemId: item.id
       } %}
+
+      {% include "_todoPriority" with {
+        item: item
+      } %}
+
     {% endfor %}
 
     {# Include the To-Do List Statistics template here #}
