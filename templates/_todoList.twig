@@ -24,12 +24,6 @@
     {# Include the To-Do List Statistics template here #}
     {% include "_todoStatistics" %}
 
-    {# Include the To-Do List Categories template here #}
-    {% include "_todoCategories" %}
-
-    {# Include the To-Do List Categories template here #}
-    {% include "_todoCategories" %}
-
     <div class="px-12 pt-6 text-base flex items-center justify-end space-x-2">
       <span>Move done items at the end?</span>
       <button sprig id="sortButton" s-val:sort="{{ sort == "status" ? "date" : "status" }}" class="w-5 h-5 rounded bg-white hover:bg-red-200">
