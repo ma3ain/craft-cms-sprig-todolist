@@ -13,12 +13,6 @@
     {% if dueDate %}
       <p>Due Date: {{ dueDate|date('F j, Y') }}</p>
     {% endif %}
-    {% if priority %}
-      <p class="{{ priorityClass }}">Priority: {{ priority }}</p>
-    {% endif %}
-    {% if itemCategories|length > 0 %}
-      <p>Categories: {% for category in itemCategories %}{{ category.title }}{% if not loop.last %}, {% endif %}{% endfor %}</p>
-    {% endif %}
   </div>
   <div class="flex items-center space-x-3">
     <form sprig s-method="post" s-action="entries/save-entry" s-replace="#item_{{ item.id }}" class="inline-flex">
