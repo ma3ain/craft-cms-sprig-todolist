@@ -1,6 +1,6 @@
 {% set item = craft.entries.section("items").status(null).id(itemId).one() ?? null %}
 {% set isDone = item.enabled is defined and not item.enabled %}
-{% set itemCategories = item.todoCategories.all() %}
+{% set itemCategories = item.itemCategories.all() %}
 
 
 <div id="item_{{ item.id }}" class="item px-12 py-6 bg-white/10 text-lg flex justify-between space-x-6 font-semibold">
