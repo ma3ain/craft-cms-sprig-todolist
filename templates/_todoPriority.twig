@@ -1,1 +1,50 @@
+{% set priority = item.priorityFieldHandle %}
+{% set priorityClass = {
+  'high': 'text-red-600',
+  'medium': 'text-yellow-600',
+  'low': 'text-green-600',
+}[priority] ?? '' %}
+
+<div id="item_{{ item.id }}" class="item px-12 py-6 bg-white/10 text-lg flex justify-between space-x-6 font-semibold">
+  <div>
+    <span class="relative transition-opacity duration-200 linear {{
+      isDone
+        ? "opacity-50 before:absolute before:content-[''] before:top-1/2 before:-left-2 before:transform before:-translate-y-1/2 before:w-0 before:h-px before:bg-white before:animate-strikeitem"
+        : ""
+      }}">
+      {{ item.title }}
+    </span>
+    {% if priority %}
+      <p class="{{ priorityClass }}">Priority: {{ priority }}</p>
+    {% endif %}
+    {% if itemCategories|length > 0 %}
+      <p>Categories: {% for category in itemCategories %}{{ category.title }}{% if not loop.last %}, {% endif %}{% endfor %}</p>
+    {% endif %}
+  </div>
+  <div class="flex items-center space-x-3">
+    <form sprig s-method="post" s-action="entries/save-entry" s-replace="#item_{{ item.id }}" class="inline-flex">
+      {{ hiddenInput("sectionId", "12") }}
+      {{ hiddenInput("entryId", item.id) }}
+      {{ hiddenInput("enabled", isDone ? 1 : 0) }}
+      <button type="submit" class="w-6 h-6 rounded bg-white hover:bg-red-200">
+        {% if isDone %}
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-red-600">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+          </svg>
+        {% endif %}
+      </button>
+    </form>
+
+    <form sprig s-method="post" s-action="elements/delete" s-replace="#item_{{ item.id }}" s-confirm="Really remove it?" class="inline-flex">
+      {{ hiddenInput("elementId", item.id) }}
+      <button type="submit">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 hover:text-red-200">
+          <path stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
+        </svg>
+      </button>
+    </form>
+  </div>
+</div>
 
