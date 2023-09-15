@@ -1,7 +1,5 @@
 {% set item = craft.entries.section("items").status(null).id(itemId).one() ?? null %}
 {% set isDone = item.enabled is defined and not item.enabled %}
-{% set itemCategories = item.todoCategories.all() %}
-
 
 <div id="item_{{ item.id }}" class="item px-12 py-6 bg-white/10 text-lg flex justify-between space-x-6 font-semibold">
   <div>
@@ -12,11 +10,6 @@
       }}">
       {{ item.title }}
     </span>
-
-    {% if itemCategories|length > 0 %}
-      <p>Categories: {% for category in todoCategories %}{{ category.title }}{% if not loop.last %}, {% endif %}{% endfor %}</p>
-    {% endif %}
-
   </div>
   <div class="flex items-center space-x-3">
     <form sprig s-method="post" s-action="entries/save-entry" s-replace="#item_{{ item.id }}" class="inline-flex">
